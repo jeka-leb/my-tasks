@@ -1,0 +1,10 @@
+.addItem {
+    margin-top: 10px;
+}
+
+.addItem input {
+    margin-right: 3px;
+    max-width: 305px;
+}
+
+

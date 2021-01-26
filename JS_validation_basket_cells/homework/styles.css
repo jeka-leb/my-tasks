@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#task1 {
+  position: absolute;
+  display: inline-grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 3px;
+  right: 5%;
+}
+
+.table {
+  line-height: 90px;
+  text-align: center;
+  border: solid black 2px;
+  padding: 5px;
+  background: honeydew;
+}
+
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
+
+.yellow {
+  background: rgb(253, 228, 5);
+}
+
+#task2 {
+  position: absolute;
+  display: inline-block;
+  width: 450px;
+  left: 50%;
+  top: 70%;
+  margin-left: -190px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.notification {
+  text-align: center;
+  line-height: 40px;
+  background: green;
+  width: 450px;
+  height: 50px;
+}
+
+.input-format {
+  margin: 15px 0;
+  width: 300px;
+  height: 30px;
+}
+
+.submit {
+  margin-left: 15px;
+  width: 100px;
+  height: 30px;
+}
+
+.notification-invalid {
+  background: red;
+}
+
+#task3 {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.basketground {
+  width: 600px;
+  height: 330px;
+}
+
+.court {
+  width: 100%;
+  height: 100%;
+}
+
+.ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 165px;
+  left: 300px;
+  margin-left: -20px;
+  margin-top: -20px;
+  transition: 2s;
+  z-index: 10;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-zone {
+  background: rgb(253, 228, 5, 0.5);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 157px;
+  left: 32px;
+  z-index: 1;
+}
+
+.right-zone {
+  background: rgb(253, 228, 5, 0.5);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 157px;
+  right: 32px;
+  z-index: 1;
+}

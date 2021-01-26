@@ -1,0 +1,281 @@
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@mixin background() {
+  background: $imgpath;
+}
+
+@mixin background() {
+  background: $imgpath;
+}
+
+@mixin flexible() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin button() {
+  width: 130px;
+  height: 40px;
+  background-color: color(buttonColor);
+  color: color(link);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+
+@mixin link() {
+  font-family: $font-family-1;
+  color: color(link);
+}
+
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img[alt="experts"] {
+  width: 350px;
+  height: 230px;
+  border-radius: 5px;
+}
+
+img[alt="content formats"] {
+  width: 315px;
+  height: 207px;
+  border-radius: 5px;
+}
+
+img[alt="certificate"] {
+  width: 385px;
+  height: 253px;
+  border-radius: 5px;
+}
+
+body {
+  font-family: $font-family-1;
+  color: color(bodyColor);
+  background-color: color(mainColor);
+  .header {
+    @include background();
+    height: 600px;
+    border-radius: 0 0 550px 0 / 0 0 250px 0;
+    &-wrap {
+      @include flexible();
+      flex-direction: column;
+      padding-top: 10px;
+      padding-left: 100px;
+      width: 500px;
+      height: 500px;
+      .landing-logo {
+        @include flexible();
+        justify-content: start;
+        align-items: center;
+        color: color(textColor);
+        img {
+          width: 35px;
+          height: 35px;
+          margin-top: 5px;
+        }
+        p {
+          padding-left: 5px;
+          line-height: 20px;
+          font-family: $font-family-2;
+          font-size: large;
+          font-weight: bold;
+          span {
+            display: block;
+            line-height: 10px;
+            font-size: xx-small;
+            font-weight: normal;
+            text-align: center;
+          }
+        }
+      }
+      .header_heading {
+        position: relative;
+        line-height: 60px;
+        width: 450px;
+        font-size: 50px;
+        font-weight: bold;
+        z-index: 3;
+        color: color(textColor);
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 10px;
+          left: 0px;
+          width: 210px;
+          height: 30px;
+          background-color: color(contentColor);
+          z-index: -1;
+        }
+      }
+      .header_text {
+        color: color(textColor);
+        font-size: 12px;
+      }
+      div {
+        &:last-child {
+          padding-right: 150px;
+          @include flexible();
+          align-items: center;
+          .header_button {
+            @include button();
+          }
+          a {
+            @include link();
+          }
+        }
+      }
+    }
+  }
+
+  .section {
+    margin-top: 20px;
+
+    &_text {
+      color: color(textColor);
+      position: relative;
+      margin: 0 auto;
+      width: 350px;
+      font-family: $font-family-1;
+      font-size: 30px;
+      z-index: 3;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 153px;
+        width: 130px;
+        height: 30px;
+        background-color: color(contentColor);
+        z-index: -1;
+      }
+    }
+    &_card_wrap {
+      @include flexible();
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .section_card {
+        @include flexible();
+        justify-content: space-around;
+        margin: 20px 0px;
+        width: 860px;
+        background: color(blockColor);
+        padding: 20px;
+        &_right_container {
+          margin-left: 30px;
+          @extend .section_card_wrap;
+        }
+        &_heading {
+          color: color(link);
+          font-weight: bold;
+        }
+        &_text {
+          font-family: $font-family-2;
+          width: 400px;
+        }
+        .section_link {
+          @include link();
+          color: color(bodyColor);
+        }
+      }
+    }
+    &_banner {
+      height: 100px;
+      position: relative;
+      top: 50px;
+      @include flexible();
+      justify-content: space-around;
+      align-items: center;
+      width: 950px;
+      margin: 0 auto;
+      background: linear-gradient(
+        to right,
+        color(buttonColor),
+        color(gradientEnd)
+      );
+      &_text_wrap {
+        .section_banner_heading {
+          position: relative;
+          font-weight: bold;
+          font-size: x-large;
+          margin-top: 25px;
+          width: 350px;
+          z-index: 3;
+          color: color(textColor);
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 95px;
+            width: 55px;
+            height: 30px;
+            background-color: color(contentColor);
+            z-index: -1;
+          }
+        }
+        .section_banner_text {
+          font-family: $font-family-2;
+          margin-bottom: 35px;
+          font-size: small;
+        }
+      }
+      &_button {
+        @include button();
+      }
+    }
+  }
+  .footer {
+    background: color(blockColor);
+    height: 100px;
+    padding: 60px 150px 20px;
+    font-family: $font-family-2;
+    font-size: small;
+    &-wrap {
+      @include flexible();
+      height: 50px;
+      margin: 25px 0;
+      align-content: center;
+      align-items: center;
+      .footer_logo {
+        @include flexible();
+        justify-content: start;
+        align-items: center;
+        align-content: center;
+        img {
+          width: 35px;
+          height: 35px;
+          margin-top: 5px;
+        }
+        p {
+          padding-left: 5px;
+          line-height: 20px;
+          font-size: large;
+          font-weight: bold;
+          span {
+            display: block;
+            // padding-left: 5px;
+            line-height: 8px;
+            text-align: center;
+            font-size: xx-small;
+            font-weight: normal;
+          }
+        }
+      }
+      .footer_text {
+        max-width: 280px;
+      }
+    }
+  }
+}

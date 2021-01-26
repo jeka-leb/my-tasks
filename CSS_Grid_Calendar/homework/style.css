@@ -1,0 +1,56 @@
+
+body {
+  padding: 0;
+  margin: 0 0 5vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px 500px;
+  grid-template-columns: 200px 150px 1fr 150px 200px;
+  grid-template-areas:
+    ". month month month ."
+    ". . showdayblock . . "
+    ". . showdateblock . .";
+}
+
+.show-month {
+  grid-area: month;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  line-height: 80px;
+}
+
+.show-day-block {
+  grid-area: showdayblock;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(7, 100px);
+}
+
+.show-day {
+  font-weight: bold ;
+  text-align: center;
+  line-height: 100px;
+}
+
+.show-date-block {
+  grid-area: showdateblock;
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  gap: 15px;
+}
+
+.item-style {
+  border: solid grey 1px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.item-style-next {
+  background: grey;
+  text-align: center;
+  line-height: 100px;
+}

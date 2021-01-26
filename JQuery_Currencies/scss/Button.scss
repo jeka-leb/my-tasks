@@ -1,0 +1,15 @@
+%bttn {
+    border: honeydew solid 2px;
+    border-radius: 4px;
+    color: white;
+}
+
+.blue-button {
+    @extend %bttn;
+    background: blue;
+}
+
+.yellow_button {
+    @extend %bttn;
+    background: yellow;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "jest_testing",
+  "version": "1.0.0",
+  "description": "Jest testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Jest",
+    "test",
+    "JS"
+  ],
+  "author": "Ievgen Lebediev",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}

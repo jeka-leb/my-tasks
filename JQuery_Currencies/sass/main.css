@@ -1,0 +1,15 @@
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  color: brown;
+}
+/*# sourceMappingURL=main.css.map */

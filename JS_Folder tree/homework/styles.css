@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.itemFocus {
+  background: rgb(144, 202, 250);
+  max-width: 200px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+i {
+  vertical-align: bottom;
+  margin: 0 10px;
+}
+
+i.file {
+  color: yellow;
+}
+
+.hid {
+  display: none;
+}
+
+.empty-line {
+  margin-left: 30px;
+}
+
+.context-menu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+.context-menu--active {
+  display: block;
+  background: rgb(199, 199, 199);
+}
+
+.context-menu__item {
+  margin: 0;
+  padding: 5px;
+  border: solid black 2px;
+}
+.context-menu__items {
+  vertical-align: middle;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.context-menu__items:hover {
+  cursor: pointer;
+  outline: solid 3px green;
+}
+
+.inputClicked {
+  z-index: 100;
+  position: relative;
+  top: -25px;
+  height: 30px;
+}
+
+.focused:hover {
+  cursor: pointer;
+}

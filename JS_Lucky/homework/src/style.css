@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  height: 600px;
+  width: 1140px;
+  background: lightseagreen;
+  font-family: "Roboto";
+}
+
+.buttons-container {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.button-first-type {
+  height: 80px;
+  width: 150px;
+  font-size: large;
+  text-align: center;
+  background-color: lightslategrey;
+}
+
+.position-left {
+    position: relative;
+    left: 100px;
+}
+
+.position-right {
+    position: relative;
+    left: 700px;
+}
+
+.unskip:disabled {
+  opacity: 0.5;
+  background-color: rgb(107, 0, 0);
+  color: antiquewhite;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.question {
+    height: 40px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.buttons-second-type-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    flex-basis: 100px;
+  }
+
+.button-second-type {
+  margin: 10px 20px;
+  max-height: 130px;
+  width: 220px;
+  font-size: large;
+  text-align: center;
+  background-color: lightslategrey;
+}
+
+.prize-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 20px 40px;
+    padding: 0 30px;
+    font-size: 20px;
+}
+
+.end,
+.win {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(36, 11, 11);
+    font-size: 32px;
+    color: rgb(155, 1, 1);
+}
+
+.unavailable {
+    display: none;
+  }
